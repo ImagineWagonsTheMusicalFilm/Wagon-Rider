@@ -1,0 +1,20 @@
+<!-- Saved as t3a05-inner-noah.html -->
+<h1 align=center>InnerHtml By Noah</h1>
+Put a link to the best help page about "innerHTML" in javascript
+<a href="http://www.google.ca">google</a>
+
+x = <input type=text id="myText01" value=7>
+<div id="myDiv01">...</div>
+
+<input type=button value="test innerHTML" onClick="{
+   document.all.myDiv01.innerHTML =
+ 'Cool <font color=red> innerHTML </font> works. it\'s awesome'
+}">
+
+
+<input type=button value="get ElementById()" onClick="{
+   document.getElementById('myDiv01').innerHTML =  'Nice'
+   'Cool <font style=\' color:red; background-color:blue; \'>color'+
+' >/font>cool'
+}">
+
