@@ -1,0 +1,44 @@
+<h2 align=center>Move Image by Noah </h2>
+
+<input type=text value=0 onMouseOver="{
+   this.value = 'x = ' + document.getElementById('myImage01').style.left
+}">
+
+<img src="myImage01.png" id="myImage01" style="position:relative; z-index:-1; left:0px; top:0px; height:300px; width:300px;">
+
+<h1><input type=button value="Go right" onClick="{
+   document.getElementById('myImage01').style.left =
+   parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
+}">
+</h1>
+
+<h1><input type=button value="Go left" onClick="{
+   document.getElementById('myImage01').style.left =
+   parseInt(document.getElementById('myImage01').style.left) + -10 + 'px'
+}">
+</h1>
+
+<h1><input type=button value="Go up" onClick="{
+   document.getElementById('myImage01').style.top =
+   parseInt(document.getElementById('myImage01').style.top) + -10 + 'px'
+}">
+</h1>
+
+<h1><input type=button value="Go down" onClick="{
+   document.getElementById('myImage01').style.top =
+   parseInt(document.getElementById('myImage01').style.top) + 10 + 'px'
+}">
+</h1>
+
+<input type=button value="Go Diagonal Right" onClick="{
+   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
+   document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 10 + 'px'
+}">
+
+<input type=button value="Go Diagonal Left" onClick="{
+   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + -10 + 'px'
+   document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 10 + 'px'
+}">
+
+
+
