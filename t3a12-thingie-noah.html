@@ -1,0 +1,25 @@
+<h2 align=center> 2D Arrays by Noah</h2>
+You make a 3x4 full array<br><br>
+
+<input type=button value="Generate 2D Array" onclick="{
+
+     document.getElementById('myDiv01').innerHTML = ' '
+     let myChart = new Array() // define 1D array
+
+     myChart[0] = new Array() // Define each row
+     myChart[1] = new Array()
+
+     myChart[0][0] =  3             // set array elements
+     myChart[1][1] =  12 
+
+     // draw the array, uses multi-line back tick character
+and $ variables!
+     document.getElementById('myDiv01').innerHTML +=
+           <table border=1>
+           <tr><td>    ${myChart[0]} </td><td>
+${myChart[0][1]}     </td>   </tr>
+            </table>
+
+}"><br><br>
+
+<div id="myDiv01"  >Your Chart will go here</div>

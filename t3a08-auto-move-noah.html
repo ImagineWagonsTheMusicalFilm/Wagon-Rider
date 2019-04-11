@@ -1,0 +1,26 @@
+<h2 align=center>Auto Right Move By Noah </h2>
+
+<img src="myImage01.png"  id="myImage01" style="position:relative;
+z-index:-1; left:0px; top:0px; height:200px; width:200px;">
+
+
+<input type=button value='right' onclick="{
+   document.getElementById('myImage01').style.left =
+   parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
+}">
+<script> myLooping =0 </script>
+<input type=button value=auto onclick="{
+   clearInterval(myLooping)
+   myLooping = setInterval(function(){
+   document.getElementById('myImage01').style.left =
+   parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
+   
+   if (parseInt(document.getElementById('myImage01').style.left) > 1500){
+      document.getElementById('myImage01').style.left = '0px'
+   }
+  }, 60)
+}">
+
+
+</body>
+</html>

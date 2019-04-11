@@ -1,0 +1,67 @@
+<font color=green><h2 align=center>Move Image by Noah </h2></font>
+
+<input type=text value=0 onMouseOver="{
+   this.value = 'x = ' + document.getElementById('myImage01').style.left
+}">
+
+<img src="myImage01.png" id="myImage01" style="position:relative; z-index:-1; left:0px; top:0px; height:300px; width:300px;">
+
+
+<body onkeydown="{
+   if(event.key == 'd') {
+document.getElementById('myImage01').style.left =
+   parseInt(document.getElementById('myImage01').style.left) + 20 + 'px'
+   }
+   if(event.key == 'a') {
+document.getElementById('myImage01').style.left =
+   parseInt(document.getElementById('myImage01').style.left) + -20 + 'px'
+}
+   if(event.key == 'w') {
+document.getElementById('myImage01').style.top =
+   parseInt(document.getElementById('myImage01').style.top) + -20 + 'px'
+}
+   if(event.key == 's') {
+document.getElementById('myImage01').style.top =
+   parseInt(document.getElementById('myImage01').style.top) + 20 + 'px'
+}
+}">
+
+document.getElementById('myImage01').style.top =
+   parseInt(document.getElementById('myImage01').style.top) + 10 + 'px'
+
+
+<input type=text value=0 onMouseOver="{
+   this.value = 'x = ' + document.getElementById('myImage02').style.left
+  if(event.key == 'ArrowDown') {
+document.getElementById('myImage02').style.top =
+   parseInt(document.getElementById('myImage02').style.top) + 20 + 'px'
+}
+
+}">
+
+<img src="myImage02.png" id="myImage02" style="position:relative; z-index:-1; left:0px; top:0px; height:300px; width:300px;">
+
+  if(event.key == 'ArrowDown') {
+document.getElementById('myImage02').style.top =
+   parseInt(document.getElementById('myImage02').style.top) + 20 + 'px'
+
+
+
+
+
+  </script>
+  </head>
+
+  <body onload="gameLoop()" onkeydown="" onkeyup="" bgcolor='black'>
+   Test
+  <img id="image1" src="C:\Users\itpr13266\Desktop\mp.jpg" style="position:absolute;"
+                                                              height="15" width="15">
+  </body>
+   end html
+</html>
+
+
+<font color=black><h2>                                                      HAYDEN SAYS THIS WAS HIS IDEA BUT IT WAS REALLY MINE</font></h2>
+
+
+
