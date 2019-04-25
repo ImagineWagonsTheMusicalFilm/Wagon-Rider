@@ -1,0 +1,42 @@
+<h1 align=center> Encryption by Noah</h1>
+<textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br>
+
+<input type=button value="encrypt" onclick='{
+      let myTemp = ' '
+      myString = document.getElementById('myArea01').value.toLowerCase().split(' ')
+      for (let myLoop=0;        myLoop < myString.length; myLoop++){
+           myTemp = myString[myLoop]
+           if (myString[myLoop] == 'e')  {myTemp     =   'f'}
+           if (myString[myLoop] == 'h')  {myTemp     =   'f'}
+
+           //alert(myLoop+',  '+myString[myLoop])
+
+          myString[myLoop] = myTemp
+   }
+
+   document.getElementById('myArea02').value = myString.join(' ')
+}"><br><br>
+
+<textarea id="myArea02" rows=4 cols=70></textarea><br>
+
+<input type=button value="decrypt" onclick="{
+   myString = document.getElementById('myArea02').value.split(' ')
+   if (myString[0] == 'F')  {
+     myString[0] = 'E'
+ }
+  document.getElementById('myArea03').value = myString.join(' ')
+}"><br><br>
+
+<textarea id="myArea03" rows=4 cols=70></textarea><br>
+
+
+<input type=button value="using ascii numbers" onclick="{
+  let myString = document.getElementById('myArea01').value.toLowerCase()
+  let myTemp =' '
+   for  (let x=0; x < myString.length; x++){
+        myTemp += String.fromCharCode(myString.charCodeAt(x)+1) 
+     }
+    document.getElementById('myArea02').value = myTemp
+
+
+   
