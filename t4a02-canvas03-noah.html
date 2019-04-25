@@ -1,0 +1,86 @@
+
+<h2 align=center>Basic Canvas drawing</h2>
+
+ <br><br>
+
+<input type=button value=".lineTo(30,200)" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 1;   
+   myContext.moveTo(20,10);
+   myContext.lineTo(30,200);
+   myContext.stroke();
+
+}">
+
+
+<input type=button value=".arc(195, 150, 140, 10, 12 * Math.PI)" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.strokeStyle = 'cyan';
+   myContext.arc(195, 150, 140, 10, 12 * Math.PI);
+   myContext.stroke();
+
+}">
+
+
+<input type=button value=".fillText('Noah can Write Side Ways', 400, 400)" onclick="{
+
+   myContext.font = '20px Arial';
+   myContext.fillText('Hello World', 400, 100);
+
+   myContext.translate(400, 100);  // move rotation point from 0,0
+   myContext.rotate(60 * Math.PI / 180); // 60 in degrees
+
+   myContext.fillText('Side Ways Text', 10, 10);
+   myContext.stroke();
+
+  // reset
+   myContext.resetTransform();  // move rotation point from 0,0
+   //myContext.rotate(-60 * Math.PI / 180); // 60 in degrees
+}">
+
+<input type=button value=".quadraticCurveTo(100,220,240,110)" onclick="{
+   myContext.beginPath();
+   myContext.moveTo(300,100);
+   myContext.quadraticCurveTo(100,220,240,110);
+   myContext.stroke();
+
+}">
+
+
+<input type=button value=".createLinearGradient(200, 400, 300, 500)" onclick="{
+   let myGradient = myContext.createLinearGradient(200, 400, 300, 500);
+   myGradient.addColorStop(0, 'purple');
+   myGradient.addColorStop(0.5, 'orange');
+   myGradient.addColorStop(1, 'green');
+
+   myContext.fillStyle = myGradient;
+   myContext.fillRect(200, 300, 400, 600);
+
+   // reset fillstyle
+   myContext.fillStyle = 'purple';
+}">
+
+<br><br>
+
+<input type=button value="ClearGradient(3000000, 3000000, 6000000, 6000000)" onclick="{
+   myContext.clearRect(200, 300, 600, 600);
+}">
+
+
+<input type=button value="Clear all" onclick="{
+   myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
+}">
+
+
+<br><br>
+
+<canvas id="myCoolTag" width="1000" height="1000" style="border:1px solid #000000;"></canvas>
+
+<script>
+   // set up global variables
+   let myCanvas=document.getElementById('myCoolTag');
+   let myContext=myCanvas.getContext('2d');
+
+</script>
+
