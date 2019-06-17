@@ -1,0 +1,107 @@
+<h1 align=left><small><small><small><small>Don't Touch The Monsters</small></small></small></small></small></h1>
+<html>
+<body background="http://pixelartmaker.com/art/6a68c9aee6a3655.png">
+</body>
+</html>
+
+
+<script>
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
+
+</script>
+
+<img src="gate.png"  id="gate"  
+style="position:absolute; z-index:-1; left:1300px; top:0px; height:250px; width:250px;">
+
+
+<img src="Man.png"  id="Man"  
+style="position:absolute; z-index:-1; left:100px; top:0px; height:250px; width:250px;">
+
+
+<img src="horses.png"  id="horses" 
+style="position:absolute; z-index:-1; left:950px; top:0px; height:200px; width:200px;">
+
+<img src="horses1.png"  id="horses1" 
+style="position:absolute; z-index:-1; left:400px; top:500px; height:200px; width:200px;">
+
+<img src="horses2.png"  id="horses2" 
+style="position:absolute; z-index:-1; left:500px; top:400px; height:200px; width:200px;">
+
+<img src="horses3.png"  id="horses3" 
+style="position:absolute; z-index:-1; left:600px; top:300px; height:200px; width:200px;">
+
+<img src="horses4.png"  id="horses4" 
+style="position:absolute; z-index:-1; left:700px; top:200px; height:200px; width:200px;">
+
+<img src="horses5.png"  id="horses5" 
+style="position:absolute; z-index:-1; left:800px; top:100px; height:200px; width:200px;">
+
+<img src="horses6.png"  id="horses6" 
+style="position:absolute; z-index:-1; left:900px; top:100px; height:200px; width:200px;">
+
+<img src="horses7.png"  id="horses7" 
+style="position:absolute; z-index:-1; left:300px; top:600px; height:200px; width:200px;">
+
+<img src="horses8.png"  id="horses8" 
+style="position:absolute; z-index:-1; left:200px; top:700px; height:200px; width:200px;">
+
+<img src="horses9.png"  id="horses9" 
+style="position:absolute; z-index:-1; left:100px; top:800px; height:200px; width:200px;">
+
+<img src="horses10.png"  id="horses10" 
+style="position:absolute; z-index:-1; left:100px; top:900px; height:200px; width:200px;">
+
+
+<body onkeydown="{
+
+   if (event.key == 'd') {
+   document.getElementById('Man').style.left = parseInt(document.getElementById('Man').style.left) + 10 + 'px'
+    }    // d = go right
+
+   if (event.key == 'a') {
+   document.getElementById('Man').style.left = parseInt(document.getElementById('Man').style.left) + -10 + 'px'
+    }    // d = go right
+
+   if (event.key == 'w') {
+   document.getElementById('Man').style.top = parseInt(document.getElementById('Man').style.top) + -10 + 'px'
+    }    // w = go up
+
+   if (event.key == 's') {
+   document.getElementById('Man').style.top = parseInt(document.getElementById('Man').style.top) + 10 + 'px'
+    }    // s = go down
+}">
+
+<script>
+
+   if (myHitOther('Man','horses')){location='game over.html'}
+
+
+   if (myHitOther('Man','gate')){location='https://www.google.ca/?safe=active&ssui=on'}
+
+   //document.getElementById('Man').style.top = parseInt(document.getElementById('Man').style.top) + 10 + 'px'
+
+
+}">
+
+
+
+
+
+</body>
+
+
