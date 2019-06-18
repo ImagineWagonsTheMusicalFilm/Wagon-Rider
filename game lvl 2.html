@@ -1,0 +1,149 @@
+<h1><small><small><small> Navigate around the monsters</small></small></small></h1>
+<h1><small><small><small> W A S D to move</small></small></small></h1>
+<html>
+<body background="http://pixelartmaker.com/art/6a68c9aee6a3655.png">
+</body>
+</html>
+
+
+<script>
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
+
+</script>
+
+<img src="gate.png"  id="gate"  
+style="position:absolute; z-index:-1; left:1300px; top:0px; height:250px; width:250px;">
+
+
+<img src="Man.png"  id="Man"  
+style="position:absolute; z-index:-1; left:100px; top:0px; height:125px; width:80px;">
+
+
+<img src="monster.png"  id="monster" 
+style="position:absolute; z-index:-1; left:970px; top:0px; height:125px; width:125px;">
+
+<img src="monster1.png"  id="monster1" 
+style="position:absolute; z-index:-1; left:400px; top:100px; height:125px; width:125px;">
+
+<img src="monster2.png"  id="monster2" 
+style="position:absolute; z-index:-1; left:750px; top:200px; height:125px; width:125px;">
+
+<img src="monster3.png"  id="monster3" 
+style="position:absolute; z-index:-1; left:750px; top:200px; height:125px; width:125px;">
+
+<img src="monster4.png"  id="monster4" 
+style="position:absolute; z-index:-1; left:650px; top:300px; height:125px; width:125px;">
+
+<img src="monster5.png"  id="monster5" 
+style="position:absolute; z-index:-1; left:550px; top:400px; height:125px; width:125px;">
+
+<img src="monster6.png"  id="monster6" 
+style="position:absolute; z-index:-1; left:450px; top:500px; height:125px; width:125px;">
+
+<img src="monster7.png"  id="monster7" 
+style="position:absolute; z-index:-1; left:350px; top:500px; height:125px; width:125px;">
+
+<img src="monster8.png"  id="monster8" 
+style="position:absolute; z-index:-1; left:500px; top:500px; height:125px; width:125px;">
+
+<img src="monster9.png"  id="monster9" 
+style="position:absolute; z-index:-1; left:150px; top:500px; height:125px; width:125px;">
+
+<img src="monster10.png"  id="monster10" 
+style="position:absolute; z-index:-1; left:50px; top:500px; height:125px; width:125px;">
+
+<img src="verticleborderline.png"  id="verticleborderline" 
+style="position:absolute; z-index:-1; left:-150px; top:0px; height:1000px; width:150px;">
+
+
+
+<img src="borderline.png1"  id="borderline1" 
+style="position:absolute; z-index:-1; left:0px; top:-110px; height:100px; width:10000px;">
+
+
+<body onkeydown="{
+
+   if (event.key == 'd') {
+   document.getElementById('Man').style.left = parseInt(document.getElementById('Man').style.left) + 10 + 'px'
+    }    // d = go right
+
+   if (event.key == 'a') {
+   document.getElementById('Man').style.left = parseInt(document.getElementById('Man').style.left) + -10 + 'px'
+    }    // d = go right
+
+   if (event.key == 'w') {
+   document.getElementById('Man').style.top = parseInt(document.getElementById('Man').style.top) + -10 + 'px'
+    }    // w = go up
+
+   if (event.key == 's') {
+   document.getElementById('Man').style.top = parseInt(document.getElementById('Man').style.top) + 10 + 'px'
+    }    // s = go down
+
+   if (myHitOther('Man','borderline')){location='game over.html'}
+
+   if (myHitOther('Man','borderline1')){location='game over.html'}
+
+   if (myHitOther('Man','verticleborderline')){location='game over.html'}
+
+   if (myHitOther('Man','verticleborderline1')){location='game over.html'}
+ 
+   if (myHitOther('Man','gate')){location='https://www.google.ca/?safe=active&ssui=on'}
+
+   if (myHitOther('Man','monster')){location='game over.html'}
+
+   if (myHitOther('Man','monster1')){location='game over.html'}
+
+   if (myHitOther('Man','monster2')){location='game over.html'}
+
+   if (myHitOther('Man','monster3')){location='game over.html'}
+
+   if (myHitOther('Man','monster4')){location='game over.html'}
+
+   if (myHitOther('Man','monster5')){location='game over.html'}
+
+   if (myHitOther('Man','monster6')){location='game over.html'}
+
+   if (myHitOther('Man','monster7')){location='game over.html'}
+
+   if (myHitOther('Man','monster8')){location='game over.html'}
+
+   if (myHitOther('Man','monster9')){location='game over.html'}
+
+   if (myHitOther('Man','monster10')){location='game over.html'}
+ 
+   if (myHitOther('Man','borderline')){location='game over.html'}
+
+   if (myHitOther('Man','borderline1')){location='game over.html'}
+
+   if (myHitOther('Man','verticleborderline')){location='game over.html'}
+
+   if (myHitOther('Man','verticleborderline1')){location='game over.html'}
+  
+
+   if (myHitOther('Man','gate')){location='https://www.google.ca/?safe=active&ssui=on'}
+
+   //document.getElementById('Man').style.top = parseInt(document.getElementById('Man').style.top) + 10 + 'px'
+
+
+}">
+
+
+
+
+
+</body>
